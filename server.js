@@ -24,7 +24,7 @@ const ProjectsSchema = new mongoose.Schema({
     name: String,
     image: String,
     description: String,
-    techonology: String,
+    technology: String,
     });
       
 const Projects = mongoose.model("Projects", ProjectsSchema);
@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 app.get("/projects", async (req, res) => {
     try {
         const projects = await Projects.find({});
-        console.log(subjects);
+        console.log(projects);
         res.json(projects);
     } catch (error) {
     res.status(500).json({ error: error.message});
