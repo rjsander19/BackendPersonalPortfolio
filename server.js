@@ -25,6 +25,8 @@ const ProjectsSchema = new mongoose.Schema({
     image: String,
     description: String,
     technology: String,
+    linkProject: String,
+    linkCode: String,
     });
       
 const Projects = mongoose.model("Projects", ProjectsSchema);
