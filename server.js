@@ -28,6 +28,9 @@ const ProjectsSchema = new mongoose.Schema({
     website: String,
     codes: String,
     process: String,
+    screenshot1: String,
+    screenshot2: String,
+    screenshot3: String
     });
       
 const Projects = mongoose.model("Projects", ProjectsSchema);
@@ -42,6 +45,11 @@ app.use(express.urlencoded({extended:true}))
 //Test route
 app.get("/", (req, res) => {
     res.send("Hello world backend page");
+});
+
+//Resume
+app.get("/resume", (req, res) => {
+    
 });
 
 //Index
